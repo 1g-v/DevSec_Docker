@@ -1,5 +1,4 @@
-# Отчет по запуску веб-сервера Nginx и базы данных Redis в контейнерах Docker
-
+# Лабораторная работа. SDL_Docker
 ## Задание
 
 ## Введение
@@ -32,17 +31,17 @@
 
 ```yaml
 version: '3'
-	services:
-		nginx:
-			build:
-			context: .
-			dockerfile: Dockerfile.nginx
-		ports:
-			- "80:80"
-redis:
-	build:
-		context: .
-		dockerfile: Dockerfile.redis
+services:
+  nginx:
+    build: 
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "80:80"
+  redis:
+    build:
+      context: .
+      dockerfile: Dockerfile.redis
 ```
 
 В этом файле мы указываем версию `3` для docker-compose. Далее определяем два сервиса: `nginx` и `redis`. 
